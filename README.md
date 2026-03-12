@@ -48,7 +48,7 @@ If Finder/Quick Look shows a green video at some FPS values (for example 8 FPS),
 This project now supports automatic H.264 post-processing (`postprocess_h264: true`) to avoid that issue.
 
 ## Download audio from YouTube links (JSON input)
-Create or edit `youtube_links.json` with your video URLs.
+Create or edit `youtube_links.json` with your video or playlist URLs.
 
 Example:
 ```json
@@ -68,5 +68,7 @@ python python/download_youtube_audio.py --json-file youtube_links.json
 
 Optional override from CLI:
 ```bash
-python python/download_youtube_audio.py --json-file youtube_links.json --output-dir audio --audio-format m4a
+python python/download_youtube_audio.py --json-file youtube_links.json --output-dir audio
 ```
+
+Note: this downloader is now MP3-only.

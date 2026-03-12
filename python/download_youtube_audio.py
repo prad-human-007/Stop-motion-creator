@@ -14,7 +14,7 @@ from yt_dlp import YoutubeDL
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Download audio from YouTube links in a JSON file"
+        description="Download MP3 audio from YouTube video/playlist links in a JSON file"
     )
     parser.add_argument(
         "--json-file",
@@ -27,15 +27,9 @@ def parse_args() -> argparse.Namespace:
         help="Directory where downloaded audio files are saved (overrides JSON output_dir)",
     )
     parser.add_argument(
-        "--audio-format",
-        default="mp3",
-        choices=["mp3", "m4a", "wav", "opus", "vorbis", "flac"],
-        help="Audio format for output files",
-    )
-    parser.add_argument(
         "--audio-quality",
         default="192",
-        help="Target audio quality for ffmpeg extraction (for example: 128, 192, 256)",
+        help="Target MP3 quality for ffmpeg extraction (for example: 128, 192, 256)",
     )
     return parser.parse_args()
 
@@ -119,21 +113,22 @@ def load_urls_and_output_dir(json_file: Path) -> tuple[List[str], str | None]:
     return urls, output_dir
 
 
-def download_all(urls: List[str], output_dir: Path, audio_format: str, audio_quality: str) -> int:
+def download_all(urls: List[str], output_dir: Path, audio_quality: str) -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     outtmpl = str(output_dir / "%(title)s [%(id)s].%(ext)s")
 
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": outtmpl,
-        "noplaylist": True,
+        # Allow playlist links to download every item in that playlist.
+        "noplaylist": False,
         "ignoreerrors": True,
         "quiet": False,
         "no_warnings": False,
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
-                "preferredcodec": audio_format,
+                "preferredcodec": "mp3",
                 "preferredquality": audio_quality,
             }
         ],
@@ -178,7 +173,6 @@ def main() -> int:
     failures = download_all(
         urls=urls,
         output_dir=output_dir,
-        audio_format=args.audio_format,
         audio_quality=args.audio_quality,
     )
 

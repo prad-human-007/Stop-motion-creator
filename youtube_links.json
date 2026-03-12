@@ -1,7 +1,15 @@
 {
   "output_dir": "audio",
   "videos": [
-    "https://www.youtube.com/watch?v=VIDEO_ID_1",
-    "https://www.youtube.com/watch?v=VIDEO_ID_2"
+    "https://www.youtube.com/playlist?list=PLIivsWgptefLhwzNuArtmShioz8pUc3XL",
+    "https://youtu.be/isGaq0fvCCI?si=Lfn2zbmCzFn8EJFk",
+    "https://youtu.be/3SrJyeVdO9E?si=o9GNs-ZZbuJvoRfM",
+    "https://youtu.be/1NY3jWcSUxM?si=HFLXY5ztophWRQbk",
+    "https://youtu.be/LxOpt5WAB2U?si=nyhAojiBehHYnFLw",
+    "https://youtu.be/pjfB0zyPGpM?si=VjSqQ_-fEARpiW6H",
+    "https://youtu.be/H84sldKc6aE?si=whSghT7d8T9_LMeQ",
+    "https://youtu.be/vsjxn8OEN4I?si=h3L8lwkrXn6xJBV9",
+    "https://youtu.be/cPUOAi3dWf8?si=vxAHk6SNRr981WvL",
+    "https://www.youtube.com/watch?v=c9noznqhbH4"
   ]
 }

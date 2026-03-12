@@ -1,5 +1,5 @@
 {
-  "input_dir": "/Users/prad/Projects/Stop-Motion/Photos",
+  "input_dir": "/Users/prad/Projects/Stop-Motion/Photos_copy",
   "output_file": "output/stop_motion_8_FPS.mp4",
   "fps": 8,
   "frame_step": 1,
