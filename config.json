@@ -1,7 +1,7 @@
 {
   "input_dir": "/Users/prad/Projects/Stop-Motion/Photos",
-  "output_file": "output/stop_motion_5_FPS.mp4",
-  "fps": 5,
+  "output_file": "output/stop_motion_10_FPS.mp4",
+  "fps": 10,
   "frame_step": 1,
   "image_extensions": [".jpg", ".jpeg", ".png"],
   "sort_mode": "natural",
