@@ -1,0 +1,20 @@
+{
+  "input_dir": "/Users/prad/Projects/Stop-Motion/Photos",
+  "output_file": "output/stop_motion_5_FPS.mp4",
+  "fps": 5,
+  "frame_step": 1,
+  "image_extensions": [".jpg", ".jpeg", ".png"],
+  "sort_mode": "natural",
+  "start_index": 0,
+  "end_index": null,
+  "target_width": 1080,
+  "target_height": 1920,
+  "fit_mode": "contain",
+  "background_color_bgr": [0, 0, 0],
+  "codec": "mp4v",
+  "postprocess_h264": true,
+  "ffmpeg_binary": "ffmpeg",
+  "h264_crf": 18,
+  "h264_preset": "medium",
+  "overwrite": true
+}
