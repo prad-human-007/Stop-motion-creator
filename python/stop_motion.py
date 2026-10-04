@@ -69,7 +69,7 @@ def parse_config(path: Path) -> Config:
         output_file = config_dir / output_file
     fps = float(raw.get("fps", 12))
     frame_step = int(raw.get("frame_step", 1))
-    image_extensions = [str(ext).lower() for ext in raw.get("image_extensions", [".jpg", ".jpeg", ".png"])]
+    image_extensions = [str(ext).lower() for ext in raw.get("image_extensions", [".jpg", ".jpeg", ".png", ".webp"])]
     sort_mode = str(raw.get("sort_mode", "natural")).lower()
     start_index = int(raw.get("start_index", 0))
 

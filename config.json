@@ -3,7 +3,7 @@
   "output_file": "output/stop_motion_8_FPS.mp4",
   "fps": 8,
   "frame_step": 1,
-  "image_extensions": [".jpg", ".jpeg", ".png"],
+  "image_extensions": [".jpg", ".jpeg", ".png", ".webp"],
   "sort_mode": "natural",
   "start_index": 0,
   "end_index": null,
